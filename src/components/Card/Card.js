@@ -4,10 +4,10 @@ const Card = ({ title, rating, poster }) => {
   return (
     <>
       <li className="card-container">
-        <img src={imgSrc} />
-        <section>
-          <p>{title}</p>
-          <p>rating: {rating}</p>
+        <img src={imgSrc} className="card-img" />
+        <section className="card-section">
+          <p className="title">{title}</p>
+          <p className="rating">Rating: ⭐{rating.toFixed(1)}</p>
         </section>
       </li>
     </>
