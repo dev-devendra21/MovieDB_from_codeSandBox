@@ -1,0 +1,11 @@
+.card-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+
+.popular-header {
+  font-family: monospace;
+  font-size: 25px;
+  padding: 5px;
+}
