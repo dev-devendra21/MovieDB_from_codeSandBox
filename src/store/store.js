@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import popularReducer from "./popularSlice";
+import popularReducer from './popularSlice';
 const store = configureStore({
   reducer: {
     popular: popularReducer,
