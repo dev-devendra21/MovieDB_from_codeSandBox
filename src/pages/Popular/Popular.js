@@ -35,7 +35,7 @@ const Popular = () => {
 
   if (status === APISTATUS.IDLE) {
     content = (
-      <>
+      <div className="popular-container">
         <h1 className="popular-header">Popular Movies</h1>
         <ul className="card-list-container">
           {popular.results?.map((movie) => (
@@ -48,7 +48,7 @@ const Popular = () => {
           ))}
         </ul>
         <Pagination page={currentPage} totalPages={totalPages} handlePageChange={handlePageChange} />
-      </>
+      </div>
     );
   }
   return (

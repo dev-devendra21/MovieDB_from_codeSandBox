@@ -11,7 +11,7 @@ const Header = () => (
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "active-nav-link" : "nav-link"
+              isActive ? "active-nav-link nav-link" : "nav-link"
             }
           >
             <li>Popular</li>
@@ -19,7 +19,7 @@ const Header = () => (
           <NavLink
             to="top-rated"
             className={({ isActive }) =>
-              isActive ? "active-nav-link" : "nav-link"
+              isActive ? "active-nav-link nav-link" : "nav-link"
             }
           >
             <li>Top Rated</li>
@@ -27,7 +27,7 @@ const Header = () => (
           <NavLink
             to="upcoming"
             className={({ isActive }) =>
-              isActive ? "active-nav-link" : "nav-link"
+              isActive ? "active-nav-link nav-link" : "nav-link"
             }
           >
             <li>Upcoming</li>
@@ -40,6 +40,7 @@ const Header = () => (
           </button>
         </div>
       </nav>
+
     </header>
   </>
 );

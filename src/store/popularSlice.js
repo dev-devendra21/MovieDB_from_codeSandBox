@@ -29,10 +29,11 @@ const popularSlice = createSlice({
   },
 });
 
-export const fetchPopular = createAsyncThunk("/fetch", async (_, { getState }) => {
+export const fetchPopular = createAsyncThunk("/popular", async (_, { getState }) => {
   const { currentPage } = getState().popular;
+  const API_KEY = process.env.REACT_APP_API_KEY
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=2ceb90f0b3bba0d43fcefbd0a6af8dbb&language=en-US&page=${currentPage}`
+    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${currentPage}`
   );
   const data = await res.json();
   return data;

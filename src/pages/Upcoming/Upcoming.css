@@ -1,0 +1,21 @@
+.card-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+
+.upcoming-header {
+  font-family: monospace;
+  font-size: 25px;
+  padding: 5px;
+}
+@media screen and (max-width: 767px) {
+  .card-list-container {
+    justify-content: center;
+  }
+
+  .upcoming-container {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+  }
+}

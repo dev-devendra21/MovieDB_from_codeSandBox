@@ -1,0 +1,32 @@
+.footer-container {
+  padding: 0px 10px;
+  background-color: #e0e1dd;
+  height: 60px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-mobile-container {
+  padding-left: 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.mobile-nav-link {
+  color: #0b090a;
+  text-decoration: none;
+}
+
+.mobile-nav-link:hover {
+  color: #ef233c;
+}
+
+.active-mobile-nav-link {
+  color: #d90429;
+}

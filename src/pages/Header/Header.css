@@ -3,11 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
-  background-color: gray;
+  background-color: #e0e1dd;
+  height: 60px;
 }
 
 .nav-logo {
-  color: #ffffff;
+  color: #0b090a;
   font-size: 20px;
   font-family: monospace;
 }
@@ -25,9 +26,17 @@
 
 .nav-link {
   margin-right: 10px;
-  color: #ffffff;
+  color: #0b090a;
   text-decoration: none;
   font-family: monospace;
+}
+
+.nav-link:hover {
+  color: #ef233c;
+}
+
+.active-nav-link {
+  color: #d90429;
 }
 
 .search-input {
@@ -39,15 +48,21 @@
   margin-left: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .nav-link-container {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .search-input {
     width: 250px;
   }
-}
+  .nav-bar {
+    padding: 0px 40px;
+  }
 
-.active-nav-link {
-  color: orange;
-  text-decoration: none;
-  margin-right: 10px;
-  font-family: monospace;
+  .nav-link {
+    margin-right: 20px;
+  }
 }
