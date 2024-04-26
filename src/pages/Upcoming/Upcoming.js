@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { fetchUpcoming, setCurrentPage } from "../../store/upcomingSlice";
 import { APISTATUS } from "../../utils/constant";
 import Loader from "../../components/Loader/Loader";
+import { setSearchTerm } from "../../store/searchSlice";
 
 
 import Content from "../../components/Content/Content";
@@ -15,6 +16,7 @@ const Upcoming = () => {
 
     useEffect(() => {
         dispatch(fetchUpcoming());
+        dispatch(setSearchTerm(""));
     }, [dispatch]);
 
     const handlePageChange = (pageNo) => {

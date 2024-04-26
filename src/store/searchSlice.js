@@ -32,11 +32,11 @@ const searchSlice = createSlice({
     }
 })
 
-export const fetchSearch = createAsyncThunk("/search?query", async (query, { getState }) => {
-    const { currentPage } = getState().search;
+export const fetchSearch = createAsyncThunk("/search?query", async (_, { getState }) => {
+    const { currentPage, searchTerm } = getState().search;
     const API_KEY = process.env.REACT_APP_API_KEY
     const res = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${currentPage}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=${currentPage}`
     );
     const data = await res.json();
     return data;

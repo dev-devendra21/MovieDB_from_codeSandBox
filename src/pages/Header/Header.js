@@ -1,15 +1,18 @@
 import { useRef } from "react";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
-import { fetchSearch, setSearchTerm } from "../../store/searchSlice";
+import { NavLink, useNavigate } from "react-router-dom";
+import { fetchSearch, setSearchTerm, setCurrentPage } from "../../store/searchSlice";
 import { useDispatch } from "react-redux";
 const Header = () => {
   const searchQuery = useRef("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSearchInput = () => {
     const query = searchQuery.current.value;
     dispatch(setSearchTerm(query));
-    dispatch(fetchSearch(query));
+    dispatch(setCurrentPage(1));
+    dispatch(fetchSearch());
+    navigate("/");
     searchQuery.current.value = "";
   }
   return (
@@ -46,7 +49,7 @@ const Header = () => {
             </NavLink>
           </ul>
           <div>
-            <input type="search" ref={searchQuery} className="search-input" />
+            <input placeholder="Movie Name" onKeyDown={(e) => e.key === "Enter" && handleSearchInput()} type="search" ref={searchQuery} className="search-input" />
             <button onClick={handleSearchInput} type="button" className="search-btn">
               Search
             </button>

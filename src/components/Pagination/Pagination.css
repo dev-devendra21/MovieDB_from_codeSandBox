@@ -8,6 +8,16 @@
   justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .pagination-container {
+    width: 500px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .pagination-container > p {
   color: #ffffff;
 }

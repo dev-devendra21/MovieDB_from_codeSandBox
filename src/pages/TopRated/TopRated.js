@@ -4,8 +4,7 @@ import { fetchTopRated, setCurrentPage } from "../../store/topRatedSlice";
 import { APISTATUS } from "../../utils/constant";
 import Loader from "../../components/Loader/Loader";
 import Content from "../../components/Content/Content";
-
-
+import { setSearchTerm } from "../../store/searchSlice";
 
 const TopRated = () => {
     const dispatch = useDispatch();
@@ -13,6 +12,7 @@ const TopRated = () => {
 
     useEffect(() => {
         dispatch(fetchTopRated());
+        dispatch(setSearchTerm(""));
     }, [dispatch]);
 
     const handlePageChange = (pageNo) => {

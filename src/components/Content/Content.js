@@ -14,6 +14,7 @@ function Content({ data, title, handlePageChange, ...props }) {
                         title={movie.title}
                         rating={movie.vote_average}
                         poster={movie.poster_path}
+                        id={movie.id}
                     />
                 ))}
             </ul>
