@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { MdUpcoming } from "react-icons/md";
+import { FaFire, FaHome } from "react-icons/fa";
 
 import './Footer.css'
 
@@ -13,7 +15,7 @@ function Footer() {
                         isActive ? "active-mobile-nav-link mobile-nav-link" : "mobile-nav-link"
                     }
                 >
-                    <li>Popular</li>
+                    <li className='nav-list'><FaHome className='nav-icon' /><p>Popular</p></li>
                 </NavLink>
                 <NavLink
                     to="top-rated"
@@ -21,7 +23,7 @@ function Footer() {
                         isActive ? "active-mobile-nav-link mobile-nav-link" : "mobile-nav-link"
                     }
                 >
-                    <li>Top Rated</li>
+                    <li className='nav-list'><FaFire className='nav-icon' /><p>Top Rated</p></li>
                 </NavLink>
                 <NavLink
                     to="upcoming"
@@ -29,7 +31,7 @@ function Footer() {
                         isActive ? "active-mobile-nav-link mobile-nav-link" : "mobile-nav-link"
                     }
                 >
-                    <li>Upcoming</li>
+                    <li className='nav-list'><MdUpcoming className='nav-icon' /><p>Upcoming</p></li>
                 </NavLink>
             </ul>
         </footer>
