@@ -5,6 +5,7 @@ import { APISTATUS } from "../../utils/constant";
 import Loader from "../../components/Loader/Loader";
 
 import Content from "../../components/Content/Content";
+import Error from "../../components/Error/Error";
 
 
 const Popular = () => {
@@ -27,7 +28,7 @@ const Popular = () => {
   }
 
   if (status === APISTATUS.ERROR) {
-    content = <p> ERROR </p>;
+    content = <Error />;
   }
 
   if (status === APISTATUS.IDLE) {

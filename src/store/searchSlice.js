@@ -38,8 +38,10 @@ export const fetchSearch = createAsyncThunk("/search?query", async (_, { getStat
     const res = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=${currentPage}`
     );
-    const data = await res.json();
-    return data;
+    if (res.ok) {
+        const data = await res.json();
+        return data;
+    }
 });
 
 export const { setCurrentPage, setSearchTerm } = searchSlice.actions

@@ -1,0 +1,25 @@
+.cast-card {
+  width: 200px;
+  height: 320px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+
+.cast-img {
+  height: 200px;
+  width: 200px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.cast-card-section {
+  padding: 10px;
+}
+
+.cast-name {
+  font-family: monospace;
+}
+
+.cast-character {
+  font-family: monospace;
+}

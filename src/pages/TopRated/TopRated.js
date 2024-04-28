@@ -5,6 +5,7 @@ import { APISTATUS } from "../../utils/constant";
 import Loader from "../../components/Loader/Loader";
 import Content from "../../components/Content/Content";
 import { setSearchTerm } from "../../store/searchSlice";
+import Error from "../../components/Error/Error";
 
 const TopRated = () => {
     const dispatch = useDispatch();
@@ -27,11 +28,11 @@ const TopRated = () => {
     }
 
     if (status === APISTATUS.ERROR) {
-        content = <p> ERROR </p>;
+        content = <Error />;
     }
 
     if (status === APISTATUS.IDLE) {
-        content = <Content data={data} title="Top Rated Movies" handlePageChange={handlePageChange} page={currentPage} totalPages={data.total_pages} />;
+        content = <Content data={data} title="Top Rated Movies" handlePageChange={handlePageChange} page={currentPage} totalPages={data?.total_pages} />;
     }
     return (
         <>

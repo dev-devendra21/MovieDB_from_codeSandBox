@@ -1,0 +1,32 @@
+.movie-details-container {
+  padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .movie-details-container {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+  }
+}
+
+.movie-cast-title {
+  font-family: monospace;
+  font-size: 25px;
+  font-family: 700;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-cast-list {
+  display: flex;
+  list-style-type: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.movie-cast-list::-webkit-scrollbar {
+  display: none;
+}

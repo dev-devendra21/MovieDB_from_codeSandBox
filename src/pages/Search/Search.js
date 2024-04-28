@@ -6,6 +6,7 @@ import { APISTATUS } from "../../utils/constant";
 import Loader from "../../components/Loader/Loader";
 
 import Content from "../../components/Content/Content";
+import Error from '../../components/Error/Error';
 
 function Search() {
     const dispatch = useDispatch();
@@ -27,11 +28,11 @@ function Search() {
     }
 
     if (status === APISTATUS.ERROR) {
-        content = <p> ERROR </p>;
+        content = <Error />;
     }
 
     if (status === APISTATUS.IDLE) {
-        content = <Content data={data} title="Searched Movies" handlePageChange={handlePageChange} page={currentPage} totalPages={data.total_pages} />;
+        content = <Content data={data} title="Searched Movies" handlePageChange={handlePageChange} page={currentPage} totalPages={data?.total_pages} />;
     }
     return (
         <>

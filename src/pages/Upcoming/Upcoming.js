@@ -7,6 +7,7 @@ import { setSearchTerm } from "../../store/searchSlice";
 
 
 import Content from "../../components/Content/Content";
+import Error from "../../components/Error/Error";
 
 
 const Upcoming = () => {
@@ -31,11 +32,11 @@ const Upcoming = () => {
     }
 
     if (status === APISTATUS.ERROR) {
-        content = <p> ERROR </p>;
+        content = <Error />;
     }
 
     if (status === APISTATUS.IDLE) {
-        content = <Content data={data} title="Upcoming Movies" handlePageChange={handlePageChange} page={currentPage} totalPages={data.total_pages} />;
+        content = <Content data={data} title="Upcoming Movies" handlePageChange={handlePageChange} page={currentPage} totalPages={data?.total_pages} />;
     }
     return (
         <>
