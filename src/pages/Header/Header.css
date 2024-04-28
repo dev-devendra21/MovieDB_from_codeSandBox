@@ -2,13 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px;
-  background-color: #e0e1dd;
+  padding: 0px 5px;
+  background-color: #000000;
   height: 60px;
 }
 
 .nav-logo {
-  color: #0b090a;
+  color: #ffffff;
   font-size: 20px;
   font-family: monospace;
 }
@@ -26,7 +26,7 @@
 
 .nav-link {
   margin-right: 10px;
-  color: #0b090a;
+  color: #ffffff;
   text-decoration: none;
   font-family: monospace;
 }
@@ -44,8 +44,13 @@
   width: 150px;
 }
 .search-btn {
-  padding: 5px;
+  padding: 7px;
   margin-left: 5px;
+  background-color: #0496ff;
+  color: #ffffff;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

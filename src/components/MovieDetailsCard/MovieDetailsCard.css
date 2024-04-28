@@ -1,0 +1,96 @@
+.movie-details-card {
+  margin: 10px 0px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: #e5e5e5;
+}
+
+.movie-details-card-description {
+  padding: 15px;
+}
+
+.movie-description {
+  display: flex;
+}
+
+.description-title {
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  color: #212529;
+}
+
+.movie-rating {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: #495057;
+}
+
+.poster {
+  width: 150px;
+  height: 300px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.runtime-and-genre {
+  display: flex;
+  align-items: center;
+}
+
+.runtime {
+  border: 1px solid #495057;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  color: #495057;
+}
+
+.genre {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 10px;
+  gap: 10px;
+  color: #212529;
+}
+
+.release-date {
+  font-size: 16px;
+  color: #212529;
+  font-family: monospace;
+}
+
+.overview {
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  color: #000000;
+}
+
+.overview-description {
+  font-size: 16px;
+  font-family: monospace;
+  color: #212529;
+}
+.backdrop-container {
+  display: none;
+}
+.backdrop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .backdrop-container {
+    width: 50%;
+    display: inline-block;
+  }
+  .movie-details-card-description {
+    width: 50%;
+  }
+  .movie-details-card {
+    display: flex;
+  }
+}

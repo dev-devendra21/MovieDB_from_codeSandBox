@@ -2,9 +2,11 @@ import Home from "./pages/Home/Home";
 import TopRated from "./pages/TopRated/TopRated";
 import Upcoming from "./pages/Upcoming/Upcoming";
 
+
 import Layout from "./pages/Layout";
 import "./styles.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MovieDetails from "./pages/MovieDetails/MovieDetails";
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
         path: "upcoming",
         element: <Upcoming />,
       },
+      {
+        path: "movie/:movieId",
+        element: <MovieDetails />
+      }
     ],
   },
 ]);

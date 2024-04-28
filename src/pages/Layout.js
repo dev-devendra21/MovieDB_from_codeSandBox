@@ -5,7 +5,6 @@ import useWindowScreen from "../hooks/useWindowScreen";
 
 export default function Layout() {
   const { width } = useWindowScreen();
-  console.log(width);
   return (
     <>
       <Header />
